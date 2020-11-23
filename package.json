@@ -7,7 +7,7 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "lint-staged":"lint-staged",
+    "lint-staged": "lint-staged",
     "lint:style": "stylelint '**/*.{css,scss,sass}'",
     "e2e": "ng e2e"
   },
@@ -45,6 +45,7 @@
     "protractor": "~7.0.0",
     "stylelint": "^13.7.2",
     "stylelint-config-standard": "^20.0.0",
+    "stylelint-order": "^4.1.0",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~3.9.5"
