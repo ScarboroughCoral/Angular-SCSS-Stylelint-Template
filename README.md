@@ -30,6 +30,6 @@ npm install stylelint-order --save-dev
   };
   ```
 - stylelintrc.base.js
-  > 参考项目文件
+  > 参考[项目文件](./stylelintrc.base.js)
 - .stylelintrc.js
-  > 参考项目文件
+  > 参考[项目文件](./.stylelintrc.js)
