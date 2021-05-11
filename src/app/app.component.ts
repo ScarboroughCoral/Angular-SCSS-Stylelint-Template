@@ -1,4 +1,6 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { user } from '@ybc/client-api';
+import { browser, appWindow, camera } from '../../../../workspace/ada-gaia-infrastructure/packages/ybc-client-api'
 
 @Component({
   selector: 'app-root',
@@ -34,6 +36,29 @@ export class AppComponent implements AfterViewInit {
       }
     });
   }
-  
-
+  async open() {
+    try {
+      await browser.browserOpen('test')
+      console.log('ok')
+    } catch (error) {
+      console.log('err')
+      console.error(error)
+    }
+  }
+  async capture() {
+    try {
+      const result = await camera.capture()
+      console.log('capture ok', result)
+    } catch (error) {
+      console.error('capture error', error)
+    }
+  }
+  resize() {
+    appWindow.beforeClose(() => {
+      console.log('lmy===resize')
+    })
+  }
+  async signout() {
+    await user.logout()
+  }
 }
